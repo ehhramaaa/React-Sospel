@@ -175,7 +175,6 @@ const Homepage = () => {
             borderWidth: 2
         });
     }, []);
-
     return (
         <>
             < Preloader />
@@ -187,27 +186,26 @@ const Homepage = () => {
                     <div className="row row-flex">
                         <div className="col-xs-12 col-md-7">
                             <div className="text-box text-white">
-                                <h2 className="title">The best <br /> landing page for <br /> your digital product.</h2>
-                                <p>Our cloud computing platform was built with simplicity <br />
-                                    so managing infrastructure is easy.</p>
+                                <h2 className="title">Delicious Pele Sausage</h2>
+                                <p>Every bite is an adventure of taste. With the tenderness of Pele's Sausage, Which Captivates Your Tongue and Heart!</p>
                                 <div className="space-30" />
-                                <a href="#product-area" className="bttn-4">Discover Now</a>
+                                <a href="#product-area" className="bttn-4">Order Now</a>
                             </div>
                         </div>
                         <div className="col-xs-12 col-md-5 text-right section-bg" style={{ backgroundImage: 'url("/src/assets/images/circle-bg-2.png")', backgroundSize: '100% auto' }}>
                             <div className="space-60 hidden-md hidden-lg" />
                             <div className="product-single-slider wow zoomIn">
                                 <div className="item">
-                                    <img src="/src/assets/images/w1.png" alt />
+                                    <img src="/src/assets/img/product2.png" alt />
                                 </div>
                                 <div className="item">
-                                    <img src="/src/assets/images/w2.png" alt />
+                                    <img src="/src/assets/img/product3.png" alt />
                                 </div>
                                 <div className="item">
-                                    <img src="/src/assets/images/w3.png" alt />
+                                    <img src="/src/assets/img/product4.png" alt />
                                 </div>
                                 <div className="item">
-                                    <img src="/src/assets/images/w4.png" alt />
+                                    <img src="/src/assets/img/product5.png" alt />
                                 </div>
                             </div>
                         </div>
@@ -220,7 +218,7 @@ const Homepage = () => {
             {/* End Header */}
 
             {/* Product Intro */}
-            <section className="intro-area v2 section-padding circle-bg relative-box" style={{ backgroundImage: 'url("/src/assets/images/watch-round-1.html"),url("/src/assets/images/wtach-section-1.png"),url("/src/assets/images/circle-bg.png")', backgroundPosition: 'right 58vw top 5vh, right 58vw bottom 10vh, right 60vw center' }} id="about-area">
+            <section className="intro-area v2 section-padding circle-bg relative-box" style={{ backgroundImage: 'url("/src/assets/images/watch-round-1.html"),url("/src/assets/img/about2.png"),url("/src/assets/images/circle-bg.png")', backgroundPosition: 'right 58vw top 5vh, right 58vw bottom 10vh, right 60vw center' }} id="about-area">
                 <div className="container">
                     <div className="row row-flex">
                         <div className="col-xs-12 col-md-6 col-md-offset-6">
@@ -228,8 +226,7 @@ const Homepage = () => {
                                 <div className="box-icon v2">
                                     <i className="fa fa-paper-plane" />
                                 </div>
-                                <h2 className="title">Book your flights from anywhere</h2>
-                                <p>Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet congue consequat. In posuere, nunc sit amet laoreet blandit, urna sapien imperdiet lectus, et molestie sem tortor quis dui.</p>
+                                <h3 className="title">Order your Pele sausage with a variety of different flavors</h3>
                                 <div className="space-30" />
                                 <a href="#product-area" className="bttn-5">Discover Now</a>
                             </div>
@@ -238,7 +235,7 @@ const Homepage = () => {
                 </div>
             </section>
 
-            <section className="intro-area v2 section-padding circle-bg" style={{ backgroundImage: 'url("/src/assets/images/wtach-section-2.png"),url("/src/assets/images/watch-round-4.html"),url("/src/assets/images/circle-bg.png")', backgroundPosition: 'left 58vw bottom 17vh, left 75vw top 10vh, left 56vw center' }}>
+            <section className="intro-area v2 section-padding circle-bg" style={{ backgroundImage: 'url("/src/assets/img/about.png"),url("/src/assets/images/watch-round-4.html"),url("/src/assets/images/circle-bg.png")', backgroundPosition: 'left 58vw bottom 17vh, left 75vw top 10vh, left 56vw center' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-xs-12 col-md-6">
@@ -246,10 +243,8 @@ const Homepage = () => {
                                 <div className="box-icon v2">
                                     <i className="fa fa-dribbble" />
                                 </div>
-                                <h2 className="title">World best water resistant watch</h2>
-                                <p>Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet congue consequat. In posuere, nunc sit amet laoreet blandit, urna sapien imperdiet lectus, et molestie sem tortor quis dui.</p>
+                                <h4 className="title">With the tenderness of Pele sausage and delicious taste, Pele sausage is suitable for foodies</h4>
                                 <div className="space-30" />
-                                <a href="#product-area" className="bttn-5">Discover Now</a>
                             </div>
                         </div>
                     </div>
@@ -257,90 +252,53 @@ const Homepage = () => {
             </section>
             {/* End Product Intro */}
 
-            {/* Product Carousel */}
-            <section className="product-area v2 angle-3" id="product-area">
+            {/* Service */}
+            <section className="feature-area v2 section-padding" id="service-area">
                 <div className="container">
-                    <div className="product-slider-2">
-                        <div className="row row-flex">
-                            <div className="col-xs-12 col-md-6">
-                                <div className="text-box text-white">
-                                    <h2 className="title">Apple Watch 3 Special Edition</h2>
-                                    <p className="desc">Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis. Nulla porta risus id neque tempor, in efficitur justo imperdiet. Etiam a ex at ante tincidunt imperdiet.</p>
-                                    <div className="space-30" />
-                                    <a href="#" className="bttn-4">Buy It Now</a>
-                                    <div className="space-30" />
-                                    <div className="title"><small>Only</small> $99</div>
+                    <div className="row">
+                        <div className="col-xs-12 col-md-6 col-md-offset-3">
+                            <div className="text-box text-center">
+                                <div className="box-icon v2">
+                                    <i className="fa fa-gg" aria-hidden="true" />
                                 </div>
-                            </div>
-                            <div className="col-xs-12 col-md-5 col-md-offset-1">
-                                <figure className="single-image">
-                                    <img src="/src/assets/images/w1.png" alt />
-                                </figure>
-                            </div>
-                        </div>
-                        <div className="row row-flex">
-                            <div className="col-xs-12 col-md-6">
-                                <div className="text-box text-white">
-                                    <h2 className="title">Apple Watch 3 Special Edition</h2>
-                                    <p className="desc">Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis. Nulla porta risus id neque tempor, in efficitur justo imperdiet. Etiam a ex at ante tincidunt imperdiet.</p>
-                                    <div className="space-30" />
-                                    <a href="#" className="bttn-4">Buy It Now</a>
-                                    <div className="space-30" />
-                                    <div className="title"><small>Only</small> $99</div>
-                                </div>
-                            </div>
-                            <div className="col-xs-12 col-md-5 col-md-offset-1">
-                                <figure className="single-image">
-                                    <img src="/src/assets/images/w2.png" alt />
-                                </figure>
-                            </div>
-                        </div>
-                        <div className="row row-flex">
-                            <div className="col-xs-12 col-md-6">
-                                <div className="text-box text-white">
-                                    <h2 className="title">Apple Watch 3 Special Edition</h2>
-                                    <p className="desc">Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis. Nulla porta risus id neque tempor, in efficitur justo imperdiet. Etiam a ex at ante tincidunt imperdiet.</p>
-                                    <div className="space-30" />
-                                    <a href="#" className="bttn-4">Buy It Now</a>
-                                    <div className="space-30" />
-                                    <div className="title"><small>Only</small> $99</div>
-                                </div>
-                            </div>
-                            <div className="col-xs-12 col-md-5 col-md-offset-1">
-                                <figure className="single-image">
-                                    <img src="/src/assets/images/w3.png" alt />
-                                </figure>
-                            </div>
-                        </div>
-                        <div className="row row-flex">
-                            <div className="col-xs-12 col-md-6">
-                                <div className="text-box text-white">
-                                    <h2 className="title">Apple Watch 3 Special Edition</h2>
-                                    <p className="desc">Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis. Nulla porta risus id neque tempor, in efficitur justo imperdiet. Etiam a ex at ante tincidunt imperdiet.</p>
-                                    <div className="space-30" />
-                                    <a href="#" className="bttn-4">Buy It Now</a>
-                                    <div className="space-30" />
-                                    <div className="title"><small>Only</small> $99</div>
-                                </div>
-                            </div>
-                            <div className="col-xs-12 col-md-5 col-md-offset-1">
-                                <figure className="single-image">
-                                    <img src="/src/assets/images/w4.png" alt />
-                                </figure>
+                                <h2 className="title">More flavors of pele sausage</h2>
+                                <div className="space-60" />
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="productShape1">
-                    <div className="productShape1inner">
-                    </div>
-                </div>
-                <div className="productShape2">
-                    <div className="productShape2inner">
+                    <div className="row">
+                        <div className="col-xs-12 col-sm-6 col-md-4">
+                            <div className="feature-box v2 wow fadeInLeft" data-wow-delay="0.3s">
+                                <div className="box-icon">
+                                    <i className="fa fa-pencil" />
+                                </div>
+                                <h3 className="title">Spicy Sospel</h3>
+                                <p className="desc">Full of spicy flavors</p>
+                            </div>
+                        </div>
+                        <div className="col-xs-12 col-sm-6 col-md-4">
+                            <div className="feature-box v3 wow fadeInLeft" data-wow-delay="0.5s">
+                                <div className="box-icon">
+                                    <i className="fa fa-cloud" />
+                                </div>
+                                <h3 className="title">Sweet Sospel</h3>
+                                <p className="desc">Dull of sweet taste</p>
+                            </div>
+                        </div>
+                        <div className="col-xs-12 col-sm-6 col-md-4">
+                            <div className="feature-box v4 wow fadeInLeft" data-wow-delay="0.7s">
+                                <div className="box-icon">
+                                    <i className="fa fa-crop" />
+                                </div>
+                                <h3 className="title">Salty Sospel</h3>
+                                <p className="desc">Full of salty flavors</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-            {/* End Product Carousel */}
+
+            {/* End Service */}
 
             {/* Testimonial */}
             <section className="section-padding testimonial-area v2" id="testimonial-area">
@@ -351,7 +309,8 @@ const Homepage = () => {
                                 <div className="box-icon v2">
                                     <i className="fa fa-bolt" aria-hidden="true" />
                                 </div>
-                                <h2 className="title">Peoples always loves our products</h2>
+                                <h2 className="title">People always
+                                    Loved the deliciousness of our pele sausage</h2>
                                 <div className="space-60" />
                             </div>
                         </div>
@@ -439,7 +398,7 @@ const Homepage = () => {
                                 <div className="box-icon v2">
                                     <i className="fa fa-map-signs" aria-hidden="true" />
                                 </div>
-                                <h2 className="title">Contact Us</h2>
+                                <h2 className="title">Our place</h2>
                                 <div className="space-60" />
                             </div>
                         </div>
@@ -448,11 +407,11 @@ const Homepage = () => {
                         <div className="col-xs-12 col-sm-12">
                             <div className="info-box wow fadeIn" data-wow-delay="0.3s">
                                 <div className="box-image">
-                                    <img src="/src/assets/images/info-1.png" alt />
+                                    <img src="/src/assets/img/contact.png" alt />
                                 </div>
                                 <div className="box-content">
                                     <h3 className="title">Bandung</h3>
-                                    <p className="desc">14204 JL.Cikutra, Jawa Barat, Indonesia</p>
+                                    <p className="desc">No.122, Jl.Dipati Ukur, Lebak Gede, Coblong, Bandung City, West Java 40132</p>
                                     <h4 className="number">6281317398575</h4>
                                 </div>
                             </div>

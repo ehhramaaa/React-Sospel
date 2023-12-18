@@ -35,49 +35,11 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="footer-bottom">
-                    <div className="container">
-                        {/* Footer-Widget-Start */}
-                        <div className="row">
-                            <div className="col-xs-12 col-sm-6 col-md-3">
-                                <div className="widget">
-                                    <h4 className="widget-title">About Us</h4>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                </div>
-                            </div>
-                            <div className="col-xs-12 col-sm-6 col-md-3">
-                                <div className="widget">
-                                    <h4 className="widget-title">Quick Link</h4>
-                                    <ul>
-                                        <li><a href="#home-area">Home</a></li>
-                                        <li><a href="#about-area">About</a></li>
-                                        <li><a href="#testimonial-area">Testimonial</a></li>
-                                        <li><a href="#contact-area">Contact Us!</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-xs-12 col-sm-6 col-md-6">
-                                <div className="widget">
-                                    <h4 className="widget-title">Social</h4>
-                                    <p>Please connect with our social profiles.</p>
-                                    <div className="space-30" />
-                                    <div className="social-menu">
-                                        <a href="#"><i className="fa fa-facebook" /></a>
-                                        <a href="#"><i className="fa fa-twitter" /></a>
-                                        <a href="#"><i className="fa fa-google-plus" /></a>
-                                        <a href="#"><i className="fa fa-linkedin" /></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {/* Footer-Widget-End */}
-                    </div>
-                </div>
-                <div className="copyright-area">
+                <div className="copyright-area" style={{ marginTop:'10rem' }}>
                     <div className="container">
                         <div className="row">
                             <div className="col-xs-12 text-center">
-                                <span className="copyright">© 2019 Jupiter. All Rights Reserved</span>
+                                <span className="copyright">© 2023 SOSPEL</span>
                             </div>
                         </div>
                     </div>

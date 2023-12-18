@@ -22,10 +22,12 @@ a {
     color: #333333;
     font-family: 'Rubik', sans-serif;
 }
+
 a {
     position: relative;
     z-index: 1;
 }
+
 input[type="submit"]:focus,
 button:focus,
 a:focus,
@@ -420,11 +422,11 @@ Blog-Area
     margin-bottom: 5px;
 }
 
-.popular-post .post-meta > span {
+.popular-post .post-meta>span {
     margin-right: 10px;
 }
 
-.popular-post .post-meta > span i.fa {
+.popular-post .post-meta>span i.fa {
     font-size: 13px;
     color: #7028e4;
 }
@@ -729,9 +731,205 @@ Blog-Area
     overflow: hidden;
 }
 
-.big-nav-links > div {
+.big-nav-links>div {
     display: inline-block;
     width: 50%;
     float: left;
 }
 
+.customOverlay {
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.customModal {
+    border-radius: 5px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.authCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 550px;
+    padding: 80px 0 0;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 20px 150px rgb(0 0 0 / 5%);
+}
+
+.authCard img {
+    margin: 0 auto 30px;
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+}
+
+.authCard h2 {
+    color: #2f2e41;
+    margin: 0 0 6px;
+}
+
+.authCard h3 {
+    color: #69687a;
+    margin: 0 0 24px;
+    font-weight: 400;
+    font-size: 14px;
+    align-self: stretch;
+}
+
+.authCard input,
+.authCard button {
+    display: block;
+    height: 48px;
+    margin: 0 40px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    text-align: center;
+}
+
+.authCard input {
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.16);
+    padding: 12px;
+    margin-bottom: 8px;
+}
+
+.authCard input::placeholder {
+    color: rgba(0, 0, 0, 0.24);
+}
+
+.authCard button {
+    background: #9563ff;
+    color: #f9f9f9;
+    border: 0;
+    cursor: pointer;
+    transition: 0.175s;
+}
+
+.authCard button:disabled {
+    background: #e1e0e8;
+    color: #bbbac5;
+    cursor: not-allowed;
+}
+
+.authCard button.secondary {
+    background: transparent;
+    color: #7e7d8a;
+}
+
+.authCard button[type="submit"] {
+    margin-bottom: 8px;
+}
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide {
+    display: flex !important;
+    flex-direction: column;
+    text-align: center;
+}
+
+@keyframes spin {
+    100% {
+        rotate: 1turn;
+    }
+}
+
+.spinner {
+    position: absolute;
+    top: 69%;
+    right: 50px;
+    translate: 0 -50%;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 3px solid #ccc9e1;
+    border-top-color: #8f44fd;
+    opacity: 0;
+    animation: spin 1s infinite linear;
+}
+
+.spinner.visible {
+    opacity: 1;
+}
+
+.alert {
+    overflow: hidden;
+    padding: 0 16px;
+    color: #ff3e72;
+    height: 0;
+    transition: 0.3s;
+}
+
+.alert.visible {
+    height: 32px;
+}
+
+.indicator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#bars {
+    margin: 8px 0;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#bars div {
+    height: 6px;
+    border-radius: 3px;
+    transition: 0.4s;
+    width: 0%;
+}
+
+#bars.weak div {
+    background: #bc2b38;
+    width: 33.33%;
+}
+
+#bars.medium div {
+    background: #d36f30;
+    width: 66.66%;
+}
+
+#bars.strong div {
+    background: #1eb965;
+    width: 80%;
+}
+
+.strength {
+    text-align: center;
+    height: 30px;
+    text-transform: capitalize;
+}
+
+.toggle {
+    position: absolute;
+    top: 69%;
+    right: 10px;
+    translate: 0 -50%;
+    width: 30px;
+    height: 30px;
+    background-image: url("/public/show.svg");
+    background-size: 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.toggle.showing {
+    background-image: url("/public/hide.svg");
+}
