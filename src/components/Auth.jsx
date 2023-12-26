@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
 
-import { Alert, AlertTitle } from '@mui/material';
-
 const Auth = ({ Modal, modalLogin, setInputValue, inputValue, swiper, usernames, setLoginModal, credentials, inputUsername, setInputUsername, inputPassword, setInputPassword }) => {
     {/* Todo Autentication */}
     const authentication = () => {
@@ -240,10 +238,6 @@ const Auth = ({ Modal, modalLogin, setInputValue, inputValue, swiper, usernames,
 
                 
             {/* Todo Alert */}
-            <Alert severity="error">
-                <AlertTitle>Error</AlertTitle>
-                This is an error alert — <strong>check it out!</strong>
-            </Alert>
         </>
     )
 }
