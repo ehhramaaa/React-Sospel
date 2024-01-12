@@ -933,3 +933,65 @@ Blog-Area
 .toggle.showing {
     background-image: url("/public/hide.svg");
 }
+
+.product {
+    display: flex;
+    align-items: center;
+}
+
+.productSelect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rincian{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rincian-pesanan {
+    display: flex;
+    flex-direction: column;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.header {
+    font-weight: bold;
+}
+
+div.swiper-slide.swiper-slide-next > div > div:nth-child(2) > div > table > thead > tr > th{
+    text-align: center;
+}
+
+.butt{
+    display: flex;
+}
+
+.butt > button {
+    width: 100%;
+}
+
+.swiper-slide.swiper-slide-active > div > div:nth-child(1){
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+}

@@ -1,15 +1,12 @@
+/* eslint-disable react/prop-types */
 
-import React, { useState } from 'react';
-import 'react-responsive-modal/styles.css'
-import 'swiper/swiper-bundle.css';
-import { Modal } from 'react-responsive-modal';
-import Swiper from 'swiper';
 import Auth from './Auth';
 
-const Navbar = () => {
+const Navbar = ({Modal, useState, Swiper, closeIconModal }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [isHoveredLogin, setIsHoveredLogin] = useState(false);
-    const [modalLogin, setLoginModal] = React.useState(false);
+    const [modalRegis, setRegisModal] = useState(false);
+    const [modalLogin, setLoginModal] = useState(false);
     const [inputValue, setInputValue] = useState('');
     const [inputUsername, setInputUsername] = useState('');
     const [inputPassword, setInputPassword] = useState('');
@@ -66,17 +63,15 @@ const Navbar = () => {
                                 </ul>
                             </div>
                             <div className="sign">
-                                <button href="#product-area" className="bttn-4" style={loginStyle} onMouseEnter={() => setIsHoveredLogin(true)} onMouseLeave={() => setIsHoveredLogin(false)} onClick={() => setLoginModal(true)}>Sign In</button>
-                                <button href="#product-area" className="bttn-4" style={regisStyle} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} >Sign Up</button>
+                                <button className="bttn-4" style={loginStyle} onMouseEnter={() => setIsHoveredLogin(true)} onMouseLeave={() => setIsHoveredLogin(false)} onClick={() => setLoginModal(true)}>Sign In</button>
+                                <button className="bttn-4" style={regisStyle} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onClick={() => setRegisModal(true)} >Sign Up</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            < Auth Modal={Modal} modalLogin={modalLogin} setInputValue={setInputValue} inputValue={inputValue} swiper={swiper} usernames={usernames} setLoginModal={setLoginModal} credentials={credentials} inputUsername={inputUsername}  setInputUsername={setInputUsername} inputPassword={inputPassword} setInputPassword={setInputPassword} />
-
-
+            < Auth Modal={Modal} modalLogin={modalLogin} modalRegis={modalRegis} setInputValue={setInputValue} inputValue={inputValue} swiper={swiper} usernames={usernames} setLoginModal={setLoginModal} setRegisModal={setRegisModal} credentials={credentials} inputUsername={inputUsername}  setInputUsername={setInputUsername} inputPassword={inputPassword} setInputPassword={setInputPassword} closeIconModal={closeIconModal} />
         </>
     )
 }

@@ -1,9 +1,21 @@
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import Preloader from "../components/Preloader"
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Swiper from 'swiper';
+import 'react-responsive-modal/styles.css'
+import 'swiper/swiper-bundle.css';
+import { Modal } from 'react-responsive-modal';
+import ProductList from '../components/ProductList';
 
 const Homepage = () => {
+    
+    const [productModal, setProductModal] = useState(false);
+
+    const closeIconModal = (
+        <img src="/public/x.svg" alt="Slide 1" style={{ width: '30px' }} />
+    );
+
     useEffect(() => {
         $('.product-single-slider').owlCarousel({
             loop: true,
@@ -178,7 +190,7 @@ const Homepage = () => {
     return (
         <>
             < Preloader />
-            < Navbar />
+            < Navbar Modal={Modal} useState={useState} Swiper={Swiper} closeIconModal={closeIconModal} />
 
             {/* Header */}
             <header className="header-area v2 angle-1" id="home-area">
@@ -189,7 +201,7 @@ const Homepage = () => {
                                 <h2 className="title">Delicious Pele Sausage</h2>
                                 <p>Every bite is an adventure of taste. With the tenderness of Pele's Sausage, Which Captivates Your Tongue and Heart!</p>
                                 <div className="space-30" />
-                                <a href="#product-area" className="bttn-4">Order Now</a>
+                                <button className="bttn-4" onClick={() => setProductModal(true)}>Order Now</button>
                             </div>
                         </div>
                         <div className="col-xs-12 col-md-5 text-right section-bg" style={{ backgroundImage: 'url("/src/assets/images/circle-bg-2.png")', backgroundSize: '100% auto' }}>
@@ -228,7 +240,7 @@ const Homepage = () => {
                                 </div>
                                 <h3 className="title">Order your Pele sausage with a variety of different flavors</h3>
                                 <div className="space-30" />
-                                <a href="#product-area" className="bttn-5">Discover Now</a>
+                                <button className="bttn-5" onClick={() => setProductModal(true)}>Discover Now</button>
                             </div>
                         </div>
                     </div>
@@ -422,6 +434,8 @@ const Homepage = () => {
             {/* End Contact */}
 
             < Footer />
+
+            <ProductList Modal={Modal} productModal={productModal} setProductModal={setProductModal} closeIconModal={closeIconModal} Swiper={Swiper} />
         </>
     )
 }

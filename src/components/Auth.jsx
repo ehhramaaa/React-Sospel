@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
-const Auth = ({ Modal, modalLogin, setInputValue, inputValue, swiper, usernames, setLoginModal, credentials, inputUsername, setInputUsername, inputPassword, setInputPassword }) => {
-    {/* Todo Autentication */}
+const Auth = ({ Modal, modalLogin, modalRegis, setInputValue, inputValue, swiper, usernames, setLoginModal, setRegisModal, credentials, inputUsername, setInputUsername, inputPassword, setInputPassword, closeIconModal }) => {
+    {/* Todo Autentication */ }
     const authentication = () => {
         const userToFind = inputUsername;
         const passwordToFind = inputPassword;
@@ -144,9 +144,6 @@ const Auth = ({ Modal, modalLogin, setInputValue, inputValue, swiper, usernames,
             strengthDiv.innerText = "";
         }
     };
-    const closeIconModal = (
-        <img src="/public/x.svg" alt="Slide 1" style={{ width: '30px' }} />
-    );
     return (
         <>
             <Modal
@@ -159,7 +156,52 @@ const Auth = ({ Modal, modalLogin, setInputValue, inputValue, swiper, usernames,
                     modal: 'customModal',
                 }}
             >
-                {/* <div className="loginCard">
+                <div className="authCard">
+                    <div className="swiper">
+                        <div className="swiper-wrapper">
+                            {/* Username */}
+                            <div className="swiper-slide">
+                                <img src="/vite.svg" alt="Slide 1" />
+                                <h2>Welcome</h2>
+                                <h3>Enter your username</h3>
+                                <input spellCheck="false" onInput={checkValid} type="text" placeholder="e.g. johnsmith" className="control" />
+                                <div id="spinner" className="spinner"></div>
+                                <button disabled={handleDisable} type="button" onClick={() => [gotoSlide(1), setInputValue('')]}>Next</button>
+                            </div>
+
+                            {/* Password */}
+                            <div className="swiper-slide">
+                                <div className="image-wrapper">
+                                    <img src="/public/vite.svg" alt="Slide 2" />
+                                </div>
+                                <h2>Security</h2>
+                                <h3>Enter your password</h3>
+                                <input onInput={checkValid} type="password" id="password" placeholder="Your password" />
+
+                                {/* Toggle Show Password */}
+                                {/* <button className="toggle" type="button" onClick={() => togglePassword(this)}></button> */}
+                                {/* End Toggle */}
+
+                                <button disabled={handleDisable} type="button" onClick={() => authentication()} style={{ marginTop: '2rem' }}>Login</button>
+                            </div>
+
+                        </div>
+                        <div className="swiper-pagination" />
+                    </div>
+                </div>
+            </Modal>
+
+            <Modal
+                open={modalRegis}
+                onClose={() => [setRegisModal(false), setInputValue('')]}
+                center
+                closeIcon={closeIconModal}
+                classNames={{
+                    overlay: 'customOverlay',
+                    modal: 'customModal',
+                }}
+            >
+                <div className="authCard">
                     <div className="swiper">
                         <div className="swiper-wrapper">
                             <div className="swiper-slide">
@@ -199,44 +241,8 @@ const Auth = ({ Modal, modalLogin, setInputValue, inputValue, swiper, usernames,
                         </div>
                         <div className="swiper-pagination" />
                     </div>
-                </div> */}
-
-                <div className="authCard">
-                    <div className="swiper">
-                        <div className="swiper-wrapper">
-                            {/* Username */}
-                            <div className="swiper-slide">
-                                <img src="/vite.svg" alt="Slide 1" />
-                                <h2>Welcome</h2>
-                                <h3>Enter your username</h3>
-                                <input spellCheck="false" onInput={checkValid} type="text" placeholder="e.g. johnsmith" className="control" />
-                                <div id="spinner" className="spinner"></div>
-                                <button disabled={handleDisable} type="button" onClick={() => [gotoSlide(1), setInputValue('')]}>Next</button>
-                            </div>
-
-                            {/* Password */}
-                            <div className="swiper-slide">
-                                <div className="image-wrapper">
-                                    <img src="/public/vite.svg" alt="Slide 2" />
-                                </div>
-                                <h2>Security</h2>
-                                <h3>Enter your password</h3>
-                                <input onInput={checkValid} type="password" id="password" placeholder="Your password" />
-
-                                {/* Toggle Show Password */}
-                                {/* <button className="toggle" type="button" onClick={() => togglePassword(this)}></button> */}
-                                {/* End Toggle */}
-
-                                <button disabled={handleDisable} type="button" onClick={() => authentication()} style={{ marginTop: '2rem' }}>Login</button>
-                            </div>
-
-                        </div>
-                        <div className="swiper-pagination" />
-                    </div>
                 </div>
             </Modal>
-
-                
             {/* Todo Alert */}
         </>
     )
